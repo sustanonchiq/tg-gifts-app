@@ -3,7 +3,6 @@ import MainLayout from "../../layouts/MainLayout";
 import Menu from "../../components/Menu/Menu";
 
 import styles from "./Upgrade.module.scss";
-import { Icon, TokenName } from "crypto-token-icon";
 import Tabs from "../../shared/ui/Tabs/Tabs";
 import type { GiftT } from "../../shared/utils/types";
 import FortuneWheel from "../../components/FortuneWheel/FortuneWheel";
@@ -117,13 +116,13 @@ const UpgradePage: FC<UpgradePageProps> = () => {
                       <h4 className={styles.name}>{name}</h4>
                       <span className={styles.price}>
                         {price}{" "}
-                        <Icon
+                        {/* <Icon
                           tokenName={TokenName.TON}
                           sx={{
                             width: "25px",
                             height: "25px",
                           }}
-                        />
+                        /> */}
                       </span>
                     </li>
                   );
@@ -160,13 +159,13 @@ const UpgradePage: FC<UpgradePageProps> = () => {
                       <h4 className={styles.name}>{name}</h4>
                       <span className={styles.price}>
                         {price}{" "}
-                        <Icon
+                        {/* <Icon
                           tokenName={TokenName.TON}
                           sx={{
                             width: "25px",
                             height: "25px",
                           }}
-                        />
+                        /> */}
                       </span>
                     </li>
                   );

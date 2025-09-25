@@ -1,15 +1,12 @@
-import { useState, type FC } from "react";
+import { type FC } from "react";
 
 import styles from "./Profile.module.scss";
-import { Icon, TokenName } from "crypto-token-icon";
 import Button from "../../shared/ui/Button/Button";
 import ConnectWalletButton from "../../shared/ui/ConnectWalletButton/ConnectWalletButton";
 import MainLayout from "../../layouts/MainLayout";
 import GiftsList from "../../components/GiftsList/GiftsList";
 import type { GiftT } from "../../shared/utils/types";
 import Tabs from "../../shared/ui/Tabs/Tabs";
-
-import { type GiftsListProps } from "../../components/GiftsList/GiftsList";
 
 interface ProfilePageProps {}
 
@@ -65,13 +62,13 @@ const ProfilePage: FC<ProfilePageProps> = () => {
         <div className={styles.balance}>
           <span className={styles.amount}>
             0.00
-            <Icon
+            {/* <Icon
               tokenName={TokenName.TON}
               sx={{
                 width: "45px",
                 height: "45px",
               }}
-            />
+            /> */}
           </span>
           <Button className={styles.topup}>Add Funds</Button>
         </div>

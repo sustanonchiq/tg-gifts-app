@@ -2,10 +2,9 @@ import type { FC } from "react";
 import MainLayout from "../../layouts/MainLayout";
 
 import styles from "./Friends.module.scss";
-import { Container, Search } from "lucide-react";
+import { Search } from "lucide-react";
 import Input from "../../shared/ui/Input/Input";
 import Button from "../../shared/ui/Button/Button";
-import { Icon, TokenName } from "crypto-token-icon";
 import Friend from "../../components/Friend/Friend";
 
 interface FriendsPageProps {}
@@ -26,13 +25,13 @@ const FriendsPage: FC<FriendsPageProps> = () => {
           <div className={styles.stat}>
             <h3>
               256.74{" "}
-              <Icon
+              {/* <Icon
                 tokenName={TokenName.TON}
                 sx={{
                   width: "30px",
                   height: "30px",
                 }}
-              />
+              /> */}
             </h3>
             total earned
           </div>
@@ -49,16 +48,16 @@ const FriendsPage: FC<FriendsPageProps> = () => {
       </div>
       <ul className={styles.list}>
         <li>
-          <Friend />
+          <Friend id={""} imgPath={""} username={""} />
         </li>
         <li>
-          <Friend />
+          <Friend id={""} imgPath={""} username={""} />
         </li>
         <li>
-          <Friend />
+          <Friend id={""} imgPath={""} username={""} />
         </li>
         <li>
-          <Friend />
+          <Friend id={""} imgPath={""} username={""} />
         </li>
       </ul>
     </MainLayout>

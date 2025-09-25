@@ -14,7 +14,6 @@
     "@tonconnect/ui-react": "^2.3.0",
     "@twa-dev/sdk": "^8.0.2",
     "antd": "^5.27.3",
-    "crypto-token-icon": "^0.0.50",
     "lucide-react": "^0.542.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",

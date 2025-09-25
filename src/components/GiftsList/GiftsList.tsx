@@ -2,7 +2,6 @@ import type { FC } from "react";
 import type { GiftT } from "../../shared/utils/types";
 
 import styles from "./GiftsLift.module.scss";
-import { Icon, TokenName } from "crypto-token-icon";
 
 export interface GiftsListProps extends React.HTMLAttributes<HTMLUListElement> {
   itemsList: GiftT[];
@@ -19,13 +18,13 @@ const GiftsList: FC<GiftsListProps> = ({ itemsList, className }) => {
               <h3 className={styles["name"]}>{name}</h3>
               <span className={styles.price}>
                 {price}
-                <Icon
+                {/* <Icon
                   tokenName={TokenName.TON}
                   sx={{
                     width: "40px",
                     height: "40px",
                   }}
-                />
+                /> */}
               </span>
             </div>
           </div>
