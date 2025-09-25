@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+
+.menu {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: $main-bg-color;
+}

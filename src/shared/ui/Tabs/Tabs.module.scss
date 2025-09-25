@@ -1,0 +1,44 @@
+@import "../../../styles/variables";
+@import "../../../styles/animations";
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  background: $primary-ui-color;
+  border-radius: 6px;
+  padding: 4px;
+  font-size: 20px;
+  margin-top: 16px;
+}
+
+.tab {
+  width: 100%;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  transition: $primary-animation-duration;
+
+  &.opened {
+    background: #c6c6c680;
+  }
+}
+
+.tabs-content {
+  margin-top: 16px;
+}
+
+.content.opened {
+  animation: scaleIn $primary-animation-duration ease forwards;
+}
+
+.content.closed {
+  display: none;
+  pointer-events: none;
+  animation: scaleOut $primary-animation-duration ease forwards;
+}

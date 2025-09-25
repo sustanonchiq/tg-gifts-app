@@ -1,0 +1,30 @@
+@keyframes orbit {
+  0% {
+    transform: translate(0, 80px) rotate(0deg) translate(0, -47.5px)
+      rotate(0deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) translate(0, -47.5px) rotate(0deg);
+  }
+}
+
+.cls-1 {
+  fill: #d900ff;
+}
+
+.cls-1,
+.cls-2 {
+  stroke-width: 0px;
+}
+
+.cls-2 {
+  fill: url(#_Безымянный_градиент_126);
+}
+
+.cls-3 {
+  fill: none;
+  stroke: #d900ff;
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+  transform: translate(0, 45px) rotate(0deg) translate(0, -47.5px) rotate(0deg);
+}

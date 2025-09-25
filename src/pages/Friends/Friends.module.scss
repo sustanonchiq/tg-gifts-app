@@ -1,0 +1,81 @@
+@import "../../styles/variables";
+
+.ref {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  border-radius: 12px;
+  text-align: center;
+  background: rgba($primary-ui-color, 0.3);
+}
+
+.title {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 16px;
+
+  & b {
+    color: blue;
+    font-weight: 700;
+  }
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 12px;
+  background: rgba($main-bg-color, 0.3);
+  border-radius: 12px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  text-transform: uppercase;
+
+  h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+
+.friends {
+  margin-top: 18px;
+
+  h2 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  & .add {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    & input {
+      width: 100%;
+    }
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 20px;
+}

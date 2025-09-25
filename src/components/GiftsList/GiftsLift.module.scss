@@ -1,0 +1,44 @@
+@import "../../styles/variables";
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+.gift {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: rgba($primary-ui-color, 0.5);
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #fff;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.picture {
+  width: 90px;
+  height: 90px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 24px;
+  font-weight: 700;
+}

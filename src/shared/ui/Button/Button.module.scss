@@ -1,0 +1,10 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.button {
+  background: $primary-ui-color;
+  border-radius: 12px;
+  padding: 12px;
+
+  @include button3d;
+}

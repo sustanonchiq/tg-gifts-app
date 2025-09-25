@@ -1,0 +1,13 @@
+@mixin button3d($shadow-size: 7px) {
+  box-shadow: 0 $shadow-size 0px 0px #000;
+  transform-style: preserve-3d;
+  transform: rotateX(20deg);
+  border: none;
+  transition: $primary-animation-duration;
+  cursor: pointer;
+
+  &.pressed {
+    transform: translateY(7px) rotateX(20deg);
+    box-shadow: 0 0px 0px 0px #000;
+  }
+}

@@ -1,0 +1,15 @@
+@import "../../../styles/variables";
+
+.input {
+  font-size: 18px;
+  height: max-content;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba($primary-ui-color, 0.2);
+  border: 1px solid $primary-ui-color;
+  color: #fff;
+
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,19 @@
+@import "./_variables.scss";
+@import "../../node_modules/reset-css/sass/reset.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $main-bg-color;
+  box-shadow: inset 0px 0px 200px 0px $primary-shadow-color;
+  min-height: 100vh;
+  padding-bottom: 130px;
+  font-family: "Nunito Sans";
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
