@@ -1,17 +1,20 @@
 import { TonConnectUIProvider } from "@tonconnect/ui-react";
 import WebApp from "@twa-dev/sdk";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import Router from "../Router/Router";
 
+type User = typeof WebApp.initDataUnsafe.user;
+
 function App() {
+  const [user, setUser] = useState<User>({} as User);
+
   useEffect(() => {
     WebApp.ready();
 
     WebApp.expand();
 
-    console.log("User:", WebApp.initDataUnsafe?.user?.username);
-    console.log("Start Param:", WebApp.initDataUnsafe?.start_param);
+    setUser(WebApp.initDataUnsafe?.user);
   }, []);
 
   // const handleClose = () => {
@@ -22,7 +25,7 @@ function App() {
     <>
       <BrowserRouter>
         <TonConnectUIProvider manifestUrl="https://<YOUR_APP_URL>/tonconnect-manifest.json">
-          {WebApp.initDataUnsafe?.user?.username}
+          {user?.username}
           <Router />
         </TonConnectUIProvider>
       </BrowserRouter>
