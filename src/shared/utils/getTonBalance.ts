@@ -1,9 +1,8 @@
 export async function getTonBalance(address: string) {
+  console.log(address);
   try {
-    const encodedAddress = encodeURIComponent(address);
-
     const response = await fetch(
-      `https://toncenter.com/api/v2/getWalletInformation?address=${encodedAddress}`,
+      `https://toncenter.com/api/v2/getWalletInformation?address=${address}`,
       {
         method: "GET",
         headers: {
@@ -19,9 +18,7 @@ export async function getTonBalance(address: string) {
     const data = await response.json();
 
     if (data.ok && data.result) {
-      const balanceTon = (
-        BigInt(data.result.balance) / BigInt(1000000000)
-      ).toString();
+      const balanceTon = (data.result.balance / 10000).toString();
       return balanceTon;
     }
 
