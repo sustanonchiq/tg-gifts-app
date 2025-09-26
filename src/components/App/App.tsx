@@ -8,7 +8,7 @@ function App() {
     <>
       <BrowserRouter>
         <UserProvider>
-          <TonConnectUIProvider manifestUrl="https://https://vercel.com/sustanonchiqs-projects/tg-gifts-app/tonconnect-manifest.json">
+          <TonConnectUIProvider manifestUrl="https://tg-gifts-app.vercel.app/tonconnect-manifest.json">
             <Router />
           </TonConnectUIProvider>
         </UserProvider>
