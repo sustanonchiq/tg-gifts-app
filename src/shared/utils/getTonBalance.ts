@@ -1,6 +1,5 @@
-export async function getTonBalance(address: string): Promise<string> {
+export async function getTonBalance(address: string) {
   try {
-    // Кодируем адрес для URL
     const encodedAddress = encodeURIComponent(address);
 
     const response = await fetch(
@@ -20,7 +19,6 @@ export async function getTonBalance(address: string): Promise<string> {
     const data = await response.json();
 
     if (data.ok && data.result) {
-      // Конвертируем наноТОН в ТОН
       const balanceTon = (
         BigInt(data.result.balance) / BigInt(1000000000)
       ).toString();
