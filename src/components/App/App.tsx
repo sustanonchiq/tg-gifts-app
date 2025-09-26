@@ -7,11 +7,11 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <UserProvider>
-          <TonConnectUIProvider manifestUrl="https://tg-gifts-app.vercel.app/tonconnect-manifest.json">
+        <TonConnectUIProvider manifestUrl="https://tg-gifts-app.vercel.app/tonconnect-manifest.json">
+          <UserProvider>
             <Router />
-          </TonConnectUIProvider>
-        </UserProvider>
+          </UserProvider>
+        </TonConnectUIProvider>
       </BrowserRouter>
     </>
   );
