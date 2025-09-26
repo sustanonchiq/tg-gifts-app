@@ -1,14 +1,14 @@
 import type { FC } from "react";
-import Header from "../../components/Header/Header";
-import Menu from "../../components/Menu/Menu";
+import MainLayout from "../../layouts/MainLayout";
 
 interface HomePageProps {}
 
 const HomePage: FC<HomePageProps> = () => {
   return (
     <>
-      <Header />
-      <Menu />
+      <MainLayout>
+        <></>
+      </MainLayout>
     </>
   );
 };

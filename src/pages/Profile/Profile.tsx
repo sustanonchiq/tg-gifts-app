@@ -1,7 +1,6 @@
 import { type FC } from "react";
 
 import styles from "./Profile.module.scss";
-import Button from "../../shared/ui/Button/Button";
 import ConnectWalletButton from "../../shared/ui/ConnectWalletButton/ConnectWalletButton";
 import MainLayout from "../../layouts/MainLayout";
 import GiftsList from "../../components/GiftsList/GiftsList";
@@ -47,32 +46,6 @@ const historyData: GiftT[] = [
 const ProfilePage: FC<ProfilePageProps> = () => {
   return (
     <>
-      <header className={styles.profile}>
-        <div className={styles["user-data"]}>
-          <img
-            src="https://naked-science.ru/wp-content/uploads/2018/10/field_image_1505196713_1471532829_1.jpg"
-            alt=""
-            className={styles.avatar}
-          />
-          <div className={styles.info}>
-            <h2 className={styles.username}>sustanonchiq</h2>
-            <span className={styles.id}>#6985493252</span>
-          </div>
-        </div>
-        <div className={styles.balance}>
-          <span className={styles.amount}>
-            0.00
-            {/* <Icon
-              tokenName={TokenName.TON}
-              sx={{
-                width: "45px",
-                height: "45px",
-              }}
-            /> */}
-          </span>
-          <Button className={styles.topup}>Add Funds</Button>
-        </div>
-      </header>
       <MainLayout>
         <ConnectWalletButton className={styles["connect-btn"]} />
         <Tabs

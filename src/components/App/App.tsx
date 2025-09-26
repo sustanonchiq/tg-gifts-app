@@ -1,33 +1,17 @@
 import { TonConnectUIProvider } from "@tonconnect/ui-react";
-import WebApp from "@twa-dev/sdk";
-import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import Router from "../Router/Router";
-
-type User = typeof WebApp.initDataUnsafe.user;
+import UserProvider from "../../providers/UserProvider";
 
 function App() {
-  const [user, setUser] = useState<User>({} as User);
-
-  useEffect(() => {
-    WebApp.ready();
-
-    WebApp.expand();
-
-    setUser(WebApp.initDataUnsafe?.user);
-  }, []);
-
-  // const handleClose = () => {
-  //   WebApp.close();
-  // };
-
   return (
     <>
       <BrowserRouter>
-        <TonConnectUIProvider manifestUrl="https://<YOUR_APP_URL>/tonconnect-manifest.json">
-          {user?.username}
-          <Router />
-        </TonConnectUIProvider>
+        <UserProvider>
+          <TonConnectUIProvider manifestUrl="https://https://vercel.com/sustanonchiqs-projects/tg-gifts-app/tonconnect-manifest.json">
+            <Router />
+          </TonConnectUIProvider>
+        </UserProvider>
       </BrowserRouter>
     </>
   );
