@@ -1,17 +1,19 @@
 import type { FC } from "react";
 import styles from "./Header.module.scss";
 import ConnectWalletButton from "../../shared/ui/ConnectWalletButton/ConnectWalletButton";
-import { useTonWallet } from "@tonconnect/ui-react";
+//import { useTonWallet } from "@tonconnect/ui-react";
 import { getTonBalance } from "../../shared/utils/getTonBalance";
 
 interface HeaderProps {}
 
 const Header: FC<HeaderProps> = () => {
-  const wallet = useTonWallet();
+  // const wallet = useTonWallet();
 
-  getTonBalance(wallet?.account?.address as string).then((balance) => {
-    console.log(`Баланс: ${balance} TON`);
-  });
+  getTonBalance("UQD0TDc5sHt0Rx9XNSC26JUipxc6TttThkjRMDDlNLvxTALR").then(
+    (balance) => {
+      console.log(`Баланс: ${balance} TON`);
+    }
+  );
 
   return (
     <header className={styles.header}>
